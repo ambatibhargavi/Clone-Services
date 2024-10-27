@@ -9,14 +9,18 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: "${REPO_URL}", branch: 'main' // Specify the branch here if it's not 'main'
+                // Checkout code from the Git repository
+                git url: "${REPO_URL}", branch: 'main'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Build the Docker image directly
+                    // Set up Docker to use Minikube's Docker daemon (if using Minikube)
+                    sh 'eval $(minikube docker-env)'
+
+                    // Build the Docker image
                     docker.build("${IMAGE_NAME}:${env.BUILD_NUMBER}")
                 }
             }
@@ -25,10 +29,10 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    // Ensure kubectl is configured to communicate with your Kubernetes cluster
+                    // Deploy to Kubernetes using kubectl commands
                     sh '''
-                    kubectl apply -f deployment.yaml
-                    kubectl apply -f service.yaml
+                    kubectl apply -f k8s/deployment.yaml
+                    kubectl apply -f k8s/service.yaml
                     '''
                 }
             }
@@ -37,7 +41,7 @@ pipeline {
 
     post {
         always {
-            // Archive artifacts if needed
+            // Archive any artifacts produced by the pipeline if needed
             archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
         }
     }
