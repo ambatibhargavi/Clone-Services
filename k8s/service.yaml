@@ -7,6 +7,6 @@ spec:
   ports:
     - port: 80  # The port that your application is listening on
       targetPort: 80  # Port on the container
-      nodePort: 30001  # This can be any port in the range 30000-32767
+      nodePort: 30002  # This can be any port in the range 30000-32767
   selector:
     app: netflix-clone
