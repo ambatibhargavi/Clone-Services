@@ -12,14 +12,15 @@ SonarQube 🔍: Integrated for code analysis to ensure high-quality and bug-free
 
 
 📁 Project Structure
-NetflixClone-DevOps
-├── Dockerfile          # Dockerfile to containerize the application
-├── k8s/                # Kubernetes deployment and service manifests
-├── Jenkinsfile         # CI/CD pipeline configuration for Jenkins
-├── ArgoCD/             # Argo CD configuration files for GitOps
-├── src/                # HTML and CSS source files
-├── README.md           # Project documentation
-└── sonar-project.properties # SonarQube configuration for code analysis
+    NetflixClone-DevOps
+├── Dockerfile          
+ ├── k8s/               
+├── Jenkinsfile         
+├── ArgoCD/            
+├── src/              
+├── README.md          
+└── sonar-project.properties 
+
 
 🚀 Getting Started
 Prerequisites
@@ -49,9 +50,9 @@ kubectl apply -f k8s/{deployment , service files }
 <img width="594" alt="Screenshot 2024-11-05 at 18 58 56" src="https://github.com/user-attachments/assets/429a376a-e986-4fad-8ee2-8f535213cb66">
 
 3. Setup Argo CD for Continuous Deployment
->>> Add this GitHub repository to Argo CD.
->>> Use the Argo CD configuration files in the ArgoCD/ folder.
->>> Argo CD will continuously monitor the repository and deploy changes automatically.
+. Add this GitHub repository to Argo CD.
+. Use the Argo CD configuration files in the ArgoCD/ folder.
+. Argo CD will continuously monitor the repository and deploy changes automatically.
 
 ![Screenshot 2024-10-28 at 12 21 09](https://github.com/user-attachments/assets/3cca9688-6b3e-45b2-9f35-a659a00f3296)
 
