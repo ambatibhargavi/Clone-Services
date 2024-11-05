@@ -12,7 +12,8 @@ SonarQube 🔍: Integrated for code analysis to ensure high-quality and bug-free
 
 
 📁 Project Structure
-    NetflixClone-DevOps
+    NetflixClone-Service
+    
 ├── Dockerfile          
  ├── k8s/               
 ├── Jenkinsfile         
