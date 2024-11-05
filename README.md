@@ -9,6 +9,8 @@ Kubernetes ☸️: Deployed the application in a scalable and managed environmen
 Argo CD 🌀: Enabled GitOps for continuous delivery, automating Kubernetes deployments.
 Jenkins ☕: Automated the CI/CD pipeline, handling build, test, and deployment tasks.
 SonarQube 🔍: Integrated for code analysis to ensure high-quality and bug-free code.
+
+
 📁 Project Structure
 NetflixClone-DevOps
 ├── Dockerfile          # Dockerfile to containerize the application
