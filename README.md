@@ -32,8 +32,8 @@ Jenkins: Installed locally or on a server, with access to the Kubernetes cluster
 SonarQube: Set up a SonarQube instance for code analysis.
 1. Build and Run with Docker
 # Clone the repository
-git clone https://github.com/ambatibhargavi/NetflixClone-Services.git
-cd NetflixClone-DevOps
+https://github.com/ambatibhargavi/Clone-Services.git
+cd NetflixClone-Services
 
 # Build Docker image
 docker build -t netflix-clone .
